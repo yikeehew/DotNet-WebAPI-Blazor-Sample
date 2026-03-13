@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Infrastructure.DbContexts;
 using Testcontainers.PostgreSql;
+using WebAPI;
 
 namespace Application.Tests.Integration;
 
