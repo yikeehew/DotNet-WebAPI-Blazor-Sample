@@ -34,14 +34,14 @@ jobs:
       - name: Restore
         run: dotnet restore server/StudentManagement.Server.sln
       - name: Restore
-        run: dotnet restore client/StudentManagement.Server.sln
+        run: dotnet restore client/StudentManagement.Client.sln
  
       - name: Build (no restore)
         run: dotnet build server/StudentManagement.Server.sln
       - name: Build (no restore)
-        run: dotnet build client/StudentManagement.Server.sln
+        run: dotnet build client/StudentManagement.Client.sln
         
       - name: Test
         run: dotnet test server/StudentManagement.Server.sln
       - name: Test
-        run: dotnet test client/StudentManagement.Server.sln
+        run: dotnet test client/StudentManagement.Client.sln
