@@ -37,11 +37,11 @@ jobs:
         run: dotnet restore client/StudentManagement.Client.sln
  
       - name: Build (no restore)
-        run: dotnet build server/StudentManagement.Server.sln
+        run: dotnet build server/StudentManagement.Server.sln --configuration ${{ env.Configuration }} --no-restore
       - name: Build (no restore)
-        run: dotnet build client/StudentManagement.Client.sln
+        run: dotnet build client/StudentManagement.Client.sln --configuration ${{ env.Configuration }} --no-restore
         
       - name: Test
-        run: dotnet test server/StudentManagement.Server.sln
+        run: dotnet test server/StudentManagement.Server.sln --configuration ${{ env.Configuration }} --no-restore
       - name: Test
-        run: dotnet test client/StudentManagement.Client.sln
+        run: dotnet test client/StudentManagement.Client.sln --configuration ${{ env.Configuration }} --no-restore
