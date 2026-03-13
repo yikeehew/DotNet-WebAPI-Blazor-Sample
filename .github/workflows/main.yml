@@ -32,16 +32,16 @@ jobs:
           dotnet-version: '8.0.x'
  
       - name: Restore
-        run: dotnet restore ./server/StudentManagement.Server.sln
+        run: dotnet restore server/StudentManagement.Server.sln
       - name: Restore
-        run: dotnet restore ./client/StudentManagement.Client.sln
+        run: dotnet restore client/StudentManagement.Client.sln
  
       - name: Build (no restore)
-        run: dotnet build ./server/StudentManagement.Server.sln --configuration ${{ env.Configuration }} --no-restore
+        run: dotnet build server/StudentManagement.Server.sln --configuration ${{ env.Configuration }} --no-restore
       - name: Build (no restore)
-        run: dotnet build ./client/StudentManagement.Client.sln --configuration ${{ env.Configuration }} --no-restore
+        run: dotnet build client/StudentManagement.Client.sln --configuration ${{ env.Configuration }} --no-restore
         
       - name: Test
-        run: dotnet test ./server/StudentManagement.Server.sln --configuration ${{ env.Configuration }} --no-restore
+        run: dotnet test server/StudentManagement.Server.sln --configuration ${{ env.Configuration }} --no-restore
       - name: Test
-        run: dotnet test ./client/StudentManagement.Client.sln --configuration ${{ env.Configuration }} --no-restore
+        run: dotnet test client/StudentManagement.Client.sln --configuration ${{ env.Configuration }} --no-restore
